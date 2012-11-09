@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>하루프레스 개인도메인 설정방법 |  day-by-day</title>
+    <title>Cloud9 IDE에 하루프레스 설치하기! |  day-by-day</title>
     <meta name="description" content="인터넷, 기술, 영화, 음악 그리고 내 이야기">
     <meta name="author" content="nezz">
     <meta name="keywords" content="internet,tech,dev,movie,music,story" />
@@ -104,7 +104,7 @@
                     <h3>About this Article</h3>
                     <p>
                         <h5>Date Released:</h5>
-                        <span>Monday, November 5 2012 10:45 PM</span>
+                        <span>Friday, November 9 2012 10:53 PM</span>
                     </p>
                 </div>
             </div>
@@ -150,7 +150,7 @@
                     <div class="well bg">
                         
                         <div class="page-header">
-                            <h1>하루프레스 개인도메인 설정방법</h1>
+                            <h1>Cloud9 IDE에 하루프레스 설치하기!</h1>
                         </div>
 
                         
@@ -159,29 +159,56 @@
                                             
 
                         <div class="markdown-wrapper">
-                            <p>하루프레스를 Github에 올려놓고 쓰고 있는데 Github 페이지를 개인도메인과 연결시킬 수 있다고 해서 시도하다가 몇번 삽질도 하고 해서 기록 및 다른 사람을 위해 기록해본다.</p>
-<h2 id="toc_28">하루프레스 개인도메인 설정방법 (Github Only)</h2>
+                            <h1 id="toc_7">맥이 없어도 하루프레스로 블로깅을 할 수 있다!</h1>
+<p>현재 하루프레스는 맥에서만 사용가능하다고 하는데, 나는 집에서는 맥, 회사에서는 PC를 사용하고 있다. 그럼 회사에서는 포스팅을 할 수가 없어서 다른 방법이 있을까 찾아보다가 <a href="http://c9.io" title="Cloud9 IDE">Cloud9</a>이라는 서비스가 있어서 여기에 하루프레스 설치를 시도해 보았다.</p><p>참고로 <a href="http://c9.io" title="Cloud9 IDE">Cloud9</a>은 node.js로 만들어진 <strong>IDE툴</strong>, <strong>터미널</strong> 등등을 제공하는 곳이며, 또한 <strong>Github의 연동</strong>도 손쉽게 할 수 있도록 만들어진 무료서비스이다. 물론 유료 서비스도 있지만 무료를 사용해도 충분하다. 가입하는 방법은 매우 쉬우므로 생략하겠다.</p><p>이제부터 <a href="http://c9.io" title="Cloud9 IDE">Cloud9</a>에 하루프레스를 설치하는 방법을 설명할 것이다. 하루프레스 공식홈페이지에서 설명하는 방법을 따라하면서 발생하는 오류를 살펴보고 그에 대한 대처를 어떻게 하는지를 설명한다. 맥에서 하루프레스를 한번이라도 써본 사람이라면 더 이해하기 쉬울것이다. 그럼 시작하자!</p>
+<h2 id="toc_8">Haroopress를 설치하자!</h2>
 
-<h3 id="toc_29">1. 하루프레스 <code>config.js</code> 파일 수정</h3>
-<p>하루프레스 root 폴더의 config.js파일을 열어 보면 다음과 같이 <code>CNAME</code>을 설정하는곳이 있는데 여기에 자신의 도메인 주소를 입력한다.</p><pre><code class="javascript">"CNAME": "nezz.pe.kr"
-</code></pre>
-<h3 id="toc_30">2. 하루프레스 deploy</h3>
-<p>그 후 하루프레스를 <code>make deploy</code>하면 Github Repository에 CNAME파일이 생성된다. 생성된 CNAME파일을 열어보면 1번에서 설정했던 도메인 주소가 나와야 정상이다.</p><p><img src="./@img/github_cname.png" alt="CNAME파일 내용확인"></p>
-<h3 id="toc_31">3. Domain 설정</h3>
-<p>나같은 경우에 도메인의 DNS를 <a href="http://kr.dnsever.com">dnsever</a>에서 관하고 있는데 다음과 같이 설정하였다.</p><p><img src="./@img/domain_a.png" alt="호스트 IP(A) 관리"></p><p><img src="./@img/domain_cname.png" alt="도메인 별명(CNAME) 관리"></p><p>Github help 문서를 보면 호스트 IP는 <code>204.232.175.78</code>로 설정하라고 안내하고 있다. 위의 그림과 같이 설정하고 terminal에서 <code>dig</code>를 이용해 도메인 정보를 살펴보면 다음과 같이 나온다.</p><p><img src="./@img/domain_terminal.png" alt="도메인 정보 조회 결과"></p><p><em class="label label-info"><strong><i class="icon-info-sign icon-white"></i> 관련링크</strong></em></p>
-<ul>
-<li><a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">Setting up a custom domain with Pages</a></li>
-</ul>
+<h3 id="toc_9">Create New Workspace - Clone From Url</h3>
+<p>하루프레스를 설치하기 위해서는 먼저 새로운 워크스페이스를 만들어야 한다. 이를 위해 <code>Create New Workspace</code>버튼을 클릭하고 <code>Clone From Url</code>을 클릭한다.</p><p><img src="./@img/c9_create.png" alt="새로운 워크스페이스 생성"></p><p>클릭하면 Clone From Url이라는 창이 보이는데 Source Url에는 <code>git://github.com/rhiokim/haroopress.git</code>를 선택하고 <code>Workspace Privacy는 Private을 선택</code>한다. 이때 Private을 선택하면 무료 서비스에서 제공하는 비공개 워크스페이스 한개를 사용하게 된다. (물론 하루프레스를 지우면 다른 용도로도 사용 가능하다.) Public 으로 하게되면 <code>config.js 파일이 다른사람에게도 노출</code>될 수 있으므로 Private을 선택하는것을 추천한다.</p><p><img src="./@img/c9_git.png" alt="Clone From Url"></p>
+<h3 id="toc_10">make init 시도</h3>
+<p><code>./bin/gh-pages.js</code>에서 에러가 발생.</p><p>현재 Cloud9에서 지원하는 node버전이 0.6.21인데 <code>fs.existsSync()</code>를 지원하지 않는 모양이다.</p><p><img src="./@img/err_1st.png" alt="make init 도중 에러발생"></p>
+<h3 id="toc_11">gh-pages.js 수정</h3>
+<p><img src="./@img/edit_1st.png" alt="수정"></p><p>찾아보니 fs를 대신 path모듈로 수정하자.</p>
+<h3 id="toc_12">make init 재시도</h3>
+<p><img src="./@img/err_2nd.png" alt="두번째 make init 도중 에러발생"></p><p><code>./bin/init.js</code>에서 에러가 발생.</p><p>위에서 발생한 에러와 이유가 같다.</p>
+<h3 id="toc_13">init.js 수정</h3>
+<p><img src="./@img/edit_2nd.png" alt="수정사항"></p>
+<h3 id="toc_14">설치 성공</h3>
+<p><img src="./@img/install_success.png" alt="설치 결과"></p>
+<h2 id="toc_15">Haroopress로 포스팅을 하자!</h2>
 
+<h3 id="toc_16">make new-post</h3>
+<p>설치를 성공했으니 새로운 글을 써봐야지!</p><p><code>make new-post</code>로 새로운 포스트를 만들고 에디터 열어서 글도 써보았다.</p>
+<h3 id="toc_17">make gen</h3>
+<p>그럼 정적 페이지를 만들기 위해서 <code>make gen</code>을 실행. 어라! 에러 발생!</p><p><img src="./@img/err_make_gen.png" alt="make gen error!"></p><p>에러메시지를 자세히 살펴보니 robotskirt의 모듈을 열 수 없다는것 같음!</p><p>그럼 한번 update를 받아볼까?</p>
+<h3 id="toc_18">npm update robotskirt</h3>
+<p><img src="./@img/npm_update_robotskirt.png" alt="npm update robotskirt"></p><p>오! 성공적으로 update가 되었다! 그럼 다시한번 <code>make gen</code> 해볼까?</p>
+<h3 id="toc_19">make gen 재시도</h3>
+<p><img src="./@img/succ_make_gen.png" alt="make gen 재시도 성공"></p>
+<h3 id="toc_20">make preview</h3>
+<p><img src="./@img/err_preview.png" alt="make preview"></p><p>역시나 에러가 발생했다. 이는 Cloud 9에서 사용할 수 있게 해놓은 Host와 Port가 정해져 있기 때문이다.</p><p>그럼 하루프레스의 <code>config.js</code>파일을 열어보자.</p>
+<h3 id="toc_21">config.js 파일 수정</h3>
+<p>기존 하루프레스에서 default로 지정한 port는 <code>8081</code>이다. 그러나 Cloud 9에서는 <code>8080</code>번만 사용 할 수 있도록 해놓았기때문에 이 부분을 수정하자!</p><p><img src="./@img/edit_config.png" alt="edit config.js"></p>
+<h3 id="toc_22">make preview 재시도</h3>
+<p><img src="./@img/make_preview.png" alt="re-make preview"></p><p>make preview에 성공했다.</p><p>브라우저에서도 확인해 보았다. Cloud 9에서 확인 할 수 있는 주소는 haroopress.<code>자신의 Cloud9 ID</code>.c9.io이다.</p><p><img src="./@img/succ_website.png" alt="browser test"></p><p>역시나 브라우저에서도 잘 보이는것을 확인 할 수 있었다.</p>
+<h2 id="toc_23">마지막 단계! Github 페이지로 deploy 하기</h2>
+<p>이제 Github 페이지에만 올리면 된다. 조금만 더 힘내자!</p><p>처음 <code>make init</code>때 github 주소를 정상적으로 입력했었다면 <code>make deploy</code> 명령으로 Github에 블로그를 올릴 수 있다.</p><p><img src="./@img/deploy_gh.png" alt="deploy to github">
+<img src="./@img/deploy_gh2.png" alt="deploy to github"></p><p>성공했다! 잠시후 성공했다는 이메일로 도착했다.</p><p><img src="./@img/succ_email.png" alt="성공이메일 도착"></p><p>github 페이지도 열어보자!</p><p><img src="./@img/github_pg.png" alt="Github Page 확인"></p><p>Github 페이지에서도 잘 보인다!!</p>
+<h2 id="toc_24">결론</h2>
+<p>결과적으로 Cloud 9 이라는 클라우드 서비스에서도 하루프레스 블로그를 운영할 수 있다. 물론 앞으로 업데이트 될 하루프레스에서는 될수도, 안될수도 있다. 그때마다 수정을 계속해야하는 불편함도 있을수 있고. 그러나 맥이 아닌 다른 플랫폼에서 하루프레스로 블로깅을 할 수 있다는것이 얼마나 기쁜일인가?</p><p>한가지 염두에 되야하는것은 Cloud 9에서 제공하는 터미널에서는 한글이 입력되지 않으므로 <code>make new-post</code> 이후에 글을 쓰는 것은 터미널이 아닌 에디터를 열어서 작성해야한다는것을 명심하자. (물론 영어로 작성할꺼라면 걱정하지 않아도 되겠다! 부럽다!)</p><p>또한 이글은 내가 호기심에 시도한것을 작성한것뿐이지 <a href="http://haroopress.org" title="Haroopress.com">하루프레스</a>와 <a href="http://twitter.com/rhiokim">@rhiokim</a>님의 의도와는 관련이 없다.</p>
                         </div>
                         <hr />
                                             
                         <div class="row-fluid">
                             
+                            <div class="pull-right">
+                                <a href="/post/harupeureseu-gaeindomein-seoljeongbangbeob" class="btn btn-info">하루프레스 개인도메인 설정방법 <i class="icon-white icon-chevron-right"></i></a>
+                            </div>
+                            
 
                             
                             <div class="pull-left">
-                                <a href="/post/haroopress-on-cloud-9" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> Cloud9 IDE에 하루프레스 설치하기!</a>
+                                <a href="/post/h3-conference-2012" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> H3 Conference 2012 참가 후기</a>
                             </div>
                             
                         </div>
