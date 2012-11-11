@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Kinds of haroopress |  day-by-day</title>
+    <title>Node.js note day-by-day</title>
     <meta name="description" content="인터넷, 기술, 영화, 음악 그리고 내 이야기">
     <meta name="author" content="nezz">
     <meta name="keywords" content="internet,tech,dev,movie,music,story" />
@@ -26,18 +26,14 @@
     <link href="/css/haroopress.css" rel="stylesheet">
     <link href="/css/theme.css" rel="stylesheet">
     <link href="/css/code/default.css" rel="stylesheet">
-    
+
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
 
-    <!-- Le javascript -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/jquery.jsonp.js"></script>
-    <script src="/js/mustache.js"></script>
-    <script src="/js/apps/github.js"></script>
-    <script src="/js/apps/twitter.js"></script>
+    <script src="/js/apps/toc.js"></script>
 </head>
 <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
@@ -75,68 +71,42 @@
       </div>
     </div>
 
-    <div class="container page-category">
-    <div class="row">
-        <div class="span3">
-                        <div class="well">
-                <ul class="nav nav-list">
-                    <li class="nav-header">Categories</li>
-                    <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
-                    
-                    <li><a href="/category/story"><i class="icon-book"></i> story</a></li>
-                    
-                    <li><a href="/category/haroopress"><i class="icon-book"></i> haroopress</a></li>
-                    
-                    <li><a href="/category/dev"><i class="icon-book"></i> dev</a></li>
-                    
-                </ul>
-            </div>
-
-                
-    <div class="well contributors">
-        <div class="pull-right">
-            <a href="/authors"><i class=" icon-info-sign"></i></a>
-        </div>
-        <h6>contributors</h6>
-        
-        <div class="row-fluid">
-            <a class="pull-left" href="/authors/nezz" title="undefined">
-                <img src="http://www.gravatar.com/avatar/d1ca68e62108265ddf2e62b347aa716e?r=pg&amp;s=128.jpg&amp;d=identicon" />
-            </a>
-            <p>
-                <strong>nezz</strong><br/>
-                <a href="https://twitter.com/#!/imtaehyun" target="_blank">@imtaehyun</a>
-            </p>
-        </div>
-        <hr>
-        
-    </div>
     
-        </div>
-        <div class="span9">
-            <div class="well">
-                <div class="page-header">
-                    <h1>Topic : haroopress</h1>
-                </div>
-                <div class="row">
-                    <div class="span9">
-                        <ul>
-                    
-                            <li>
-                                <h3>
-                                    <a href="/post/haroopress-on-cloud-9">Cloud9 IDE에 하루프레스 설치하기!</a> <small>by nezz</small>
-                                </h3>
-                            </li>
-                    
-                            <li>
-                                <h3>
-                                    <a href="/post/harupeureseu-gaeindomein-seoljeongbangbeob">하루프레스 개인도메인 설정방법</a> <small>by nezz</small>
-                                </h3>
-                            </li>
-                    
-                        </ul>
-                    </div>
-                </div>
+<link href="/css/code/default.css" rel="stylesheet">
+
+<div class="container page-page">
+    <div class="row">
+        <div class="span12">
+            <div class="well markdown-wrapper">
+                <ul class="unstyled share pull-right">
+                    <li class="twitter">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://nezz.pe.kr/node-js-note/" data-via="imtaehyun" data-hashtags="node">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <!--a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                        <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script-->
+                    </li>
+                    <li class="facebook">
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) {return;}
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+                    </li>
+                    <li class="google">
+                        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+                        <g:plusone size="medium"></g:plusone>
+                    </li>
+                </ul>
+                <p><em class="label label-info"><strong>참고자료</strong></em></p>
+<ul>
+<li><a href="http://wesbos.com/html5-canvas-websockets-nodejs/">Realtime HTML5 Canvas Drawing with WebSockets, Node.JS &amp; Socket.io</a></li>
+<li><a href="https://github.com/wesbos/websocket-canvas-draw">Github websocket-canvas-draw</a></li>
+</ul>
+
             </div>
         </div>
     </div>
@@ -158,6 +128,29 @@
         </div>
     </footer>
 
+    <script>
+        // fix sub nav on scroll
+        var $win = $(window)
+          , $nav = $('.subnav')
+          , navTop = $('.subnav').length && $('.subnav').offset().top - 40
+          , isFixed = 0
+
+        processScroll()
+
+        $win.on('scroll', processScroll)
+
+        function processScroll() {
+          var i, scrollTop = $win.scrollTop()
+          if (scrollTop >= navTop && !isFixed) {
+            isFixed = 1
+            $nav.addClass('subnav-fixed')
+          } else if (scrollTop <= navTop && isFixed) {
+            isFixed = 0
+            $nav.removeClass('subnav-fixed')
+          }
+        }
+    </script>
+    
     
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -172,6 +165,6 @@
     </script>
 
 
-
+    
 </body>
 </html>
