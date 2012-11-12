@@ -117,11 +117,11 @@
                     <li class="nav-header">Categories</li>
                     <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
                     
+                    <li><a href="/category/dev"><i class="icon-book"></i> dev</a></li>
+                    
                     <li><a href="/category/story"><i class="icon-book"></i> story</a></li>
                     
                     <li><a href="/category/haroopress"><i class="icon-book"></i> haroopress</a></li>
-                    
-                    <li><a href="/category/dev"><i class="icon-book"></i> dev</a></li>
                     
                 </ul>
             </div>
@@ -130,6 +130,11 @@
 <div class="well">
     <ul class="nav nav-list">
         <li class="nav-header">Recent Articles</li>
+    
+        <li>
+            <a href="/post/first-server-with-node" target="_blank">First Server with node
+            <span class="label">nezz</span></a>
+        </li>
     
         <li>
             <a href="/post/npm" target="_blank">npm
@@ -170,17 +175,17 @@
                                             
 
                         <div class="markdown-wrapper">
-                            <h1 id="toc_34">Node Package Manager</h1>
+                            <h1 id="toc_40">Node Package Manager</h1>
 <p>npm(Node Package Manger)는 node로 프로그래밍하는데 있어서 유용한 module들을 설치하고 업데이트하는 등의 관리를 도와준다.</p><p>또한 현재 사용하고 있는 node의 버전에 맞게 dependency check도 함께 해주는 유용함도 갖추고 있다.</p><p>npm은 따로 설치할 필요가 없다. node를 설치했다면 같이 설치되었을 것이다.</p><p><strong>npm website</strong> : <a href="http://npmjs.org/">http://npmjs.org/</a></p>
-<h2 id="toc_35">사용법</h2>
+<h2 id="toc_41">사용법</h2>
 
-<h3 id="toc_36">Module 설치법</h3>
+<h3 id="toc_42">Module 설치법</h3>
 <p><strong>npm install module_name</strong></p><p>위 명령을 실행한 디렉토리의 하위에 <code>node_module</code>을 생성하고 그 하위에 각 모듈을 설치한다. 가령 underscore.js 모듈을 설치한다면 아래와 같다.</p><p>Ex. <code>npm install underscore</code></p>
-<h3 id="toc_37">Module 설치법 (Globally)</h3>
+<h3 id="toc_43">Module 설치법 (Globally)</h3>
 <p><strong>npm install module_name -g</strong></p><p><code>-g 옵션</code>으로 설치를 하면 각 node 프로그램에 각각 해당 module을 설치해줄 필요가 없다. 즉, 한번의 설치로 모든 node프로그램에 적용 가능하다.</p><p>Ex. <code>npm install underscore -g</code></p>
-<h3 id="toc_38">Module Update 방법</h3>
+<h3 id="toc_44">Module Update 방법</h3>
 <p><strong>npm update module_name</strong></p><p>해당 모듈의 업데이트 사항이 있는 경우 모듈을 업데이트 시켜준다.</p><p>Ex. <code>npm update underscore</code></p>
-<h2 id="toc_39">여러가지 Node 모듈을 검색하는 방법</h2>
+<h2 id="toc_45">여러가지 Node 모듈을 검색하는 방법</h2>
 
 <ol>
 <li><a href="http://npmjs.org/">npm</a>사이트를 이용한다. (검색을 지원하고, 각 모듈의 설명, 버전, Dependency 등등이 자세히 설명되어 있다.)</li>

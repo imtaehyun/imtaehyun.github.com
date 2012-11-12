@@ -95,11 +95,11 @@
                     <li class="nav-header">Categories</li>
                     <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
                     
+                    <li><a href="/category/dev"><i class="icon-book"></i> dev</a></li>
+                    
                     <li><a href="/category/story"><i class="icon-book"></i> story</a></li>
                     
                     <li><a href="/category/haroopress"><i class="icon-book"></i> haroopress</a></li>
-                    
-                    <li><a href="/category/dev"><i class="icon-book"></i> dev</a></li>
                     
                 </ul>
             </div>
@@ -165,6 +165,32 @@
             <div class="well">
                 
                 <div class="page-header">
+                    <h1><a href="/post/first-server-with-node">First Server with node</a></h1>
+                    <span class="pull-right">Monday, November 12 2012 11:49 PM</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="thumbnails">
+                        <li class="thumbnail">
+                            <img src="http://www.gravatar.com/avatar/d1ca68e62108265ddf2e62b347aa716e?r=pg&amp;s=128.jpg&amp;d=identicon"/>
+                        </li>
+                    </ul>
+                </div>
+                <div class="markdown-wrapper">
+                    <h1 id="toc_4">Node를 가지고 일단 맛을 보자</h1>
+<p>이번 포스팅에서는 Node를 가지고 간단한 코드를 통해 Apache없이 웹서버를 만드는 방법을 알아보고자 한다. </p><p>Node 프로그램을 작성하기 전에 <a href="http://nodejs.org/api/">Node.js API Doc</a>을 먼저 살펴보자.</p>
+<h2 id="toc_5">Hello World!!</h2>
+<p>일단 첫번째 서버를 띄워보기 위해서 아래의 코드를 작성해 보자. 파일의 이름은 <code>파일명.js</code>로 하며 여기서는 예제로 <code>server.js</code>로 작성한다.</p>
+                </div>
+                <hr/>
+                <a class="pull-right" href="/post/first-server-with-node#disqus_thread" data-disqus-identifier="0"></a>
+                <p>
+                    <a href="/post/first-server-with-node" class="btn btn-info">Read more...</a>
+                </p>
+            </div>
+            
+            <div class="well">
+                
+                <div class="page-header">
                     <h1><a href="/post/npm">npm</a></h1>
                     <span class="pull-right">Sunday, November 11 2012 11:38 PM</span>
                 </div>
@@ -176,15 +202,15 @@
                     </ul>
                 </div>
                 <div class="markdown-wrapper">
-                    <h1 id="toc_40">Node Package Manager</h1>
+                    <h1 id="toc_46">Node Package Manager</h1>
 <p>npm(Node Package Manger)는 node로 프로그래밍하는데 있어서 유용한 module들을 설치하고 업데이트하는 등의 관리를 도와준다.</p><p>또한 현재 사용하고 있는 node의 버전에 맞게 dependency check도 함께 해주는 유용함도 갖추고 있다.</p><p>npm은 따로 설치할 필요가 없다. node를 설치했다면 같이 설치되었을 것이다.</p><p><strong>npm website</strong> : <a href="http://npmjs.org/">http://npmjs.org/</a></p>
-<h2 id="toc_41">사용법</h2>
+<h2 id="toc_47">사용법</h2>
 
-<h3 id="toc_42">Module 설치법</h3>
+<h3 id="toc_48">Module 설치법</h3>
 <p><strong>npm install module_name</strong></p>
                 </div>
                 <hr/>
-                <a class="pull-right" href="/post/npm#disqus_thread" data-disqus-identifier="0"></a>
+                <a class="pull-right" href="/post/npm#disqus_thread" data-disqus-identifier="1"></a>
                 <p>
                     <a href="/post/npm" class="btn btn-info">Read more...</a>
                 </p>
@@ -204,15 +230,15 @@
                     </ul>
                 </div>
                 <div class="markdown-wrapper">
-                    <h1 id="toc_25">맥이 없어도 하루프레스로 블로깅을 할 수 있다!</h1>
+                    <h1 id="toc_31">맥이 없어도 하루프레스로 블로깅을 할 수 있다!</h1>
 <p>현재 하루프레스는 맥에서만 사용가능하다고 하는데, 나는 집에서는 맥, 회사에서는 PC를 사용하고 있다. 그럼 회사에서는 포스팅을 할 수가 없어서 다른 방법이 있을까 찾아보다가 [Cloud9][c9]이라는 서비스가 있어서 여기에 하루프레스 설치를 시도해 보았다.</p><p>참고로 [Cloud9][c9]은 node.js로 만들어진 <strong>IDE툴</strong>, <strong>터미널</strong> 등등을 제공하는 곳이며, 또한 <strong>Github의 연동</strong>도 손쉽게 할 수 있도록 만들어진 무료서비스이다. 물론 유료 서비스도 있지만 무료를 사용해도 충분하다. 가입하는 방법은 매우 쉬우므로 생략하겠다.</p><p>이제부터 [Cloud9][c9]에 하루프레스를 설치하는 방법을 설명할 것이다. 하루프레스 공식홈페이지에서 설명하는 방법을 따라하면서 발생하는 오류를 살펴보고 그에 대한 대처를 어떻게 하는지를 설명한다. 맥에서 하루프레스를 한번이라도 써본 사람이라면 더 이해하기 쉬울것이다. 그럼 시작하자!</p>
-<h2 id="toc_26">Haroopress를 설치하자!</h2>
+<h2 id="toc_32">Haroopress를 설치하자!</h2>
 
-<h3 id="toc_27">Create New Workspace - Clone From Url</h3>
+<h3 id="toc_33">Create New Workspace - Clone From Url</h3>
 <p>하루프레스를 설치하기 위해서는 먼저 새로운 워크스페이스를 만들어야 한다. 이를 위해 <code>Create New Workspace</code>버튼을 클릭하고 <code>Clone From Url</code>을 클릭한다.</p>
                 </div>
                 <hr/>
-                <a class="pull-right" href="/post/haroopress-on-cloud-9#disqus_thread" data-disqus-identifier="1"></a>
+                <a class="pull-right" href="/post/haroopress-on-cloud-9#disqus_thread" data-disqus-identifier="2"></a>
                 <p>
                     <a href="/post/haroopress-on-cloud-9" class="btn btn-info">Read more...</a>
                 </p>
@@ -233,14 +259,14 @@
                 </div>
                 <div class="markdown-wrapper">
                     <p>하루프레스를 Github에 올려놓고 쓰고 있는데 Github 페이지를 개인도메인과 연결시킬 수 있다고 해서 시도하다가 몇번 삽질도 하고 해서 기록 및 다른 사람을 위해 기록해본다.</p>
-<h2 id="toc_32">하루프레스 개인도메인 설정방법 (Github Only)</h2>
+<h2 id="toc_38">하루프레스 개인도메인 설정방법 (Github Only)</h2>
 
-<h3 id="toc_33">1. 하루프레스 <code>config.js</code> 파일 수정</h3>
+<h3 id="toc_39">1. 하루프레스 <code>config.js</code> 파일 수정</h3>
 <p>하루프레스 root 폴더의 config.js파일을 열어 보면 다음과 같이 <code>CNAME</code>을 설정하는곳이 있는데 여기에 자신의 도메인 주소를 입력한다.</p><pre><code class="javascript">"CNAME": "nezz.pe.kr"
 </code></pre>
                 </div>
                 <hr/>
-                <a class="pull-right" href="/post/harupeureseu-gaeindomein-seoljeongbangbeob#disqus_thread" data-disqus-identifier="2"></a>
+                <a class="pull-right" href="/post/harupeureseu-gaeindomein-seoljeongbangbeob#disqus_thread" data-disqus-identifier="3"></a>
                 <p>
                     <a href="/post/harupeureseu-gaeindomein-seoljeongbangbeob" class="btn btn-info">Read more...</a>
                 </p>
@@ -261,11 +287,11 @@
                 </div>
                 <div class="markdown-wrapper">
                     <p>어제 KTH에서 매년 진행하는 <a href="http://h3.kthcorp.com/2012/">H3 컨퍼런스</a>를 다녀왔다. 작년에는 사전등록 시간을 잘못 알아서 신청하지 못했었는데, 이번엔 사전등록을 모바일 앱으로만 할 수 있었는데다가 시간이 되니까 알아서 푸쉬노티를 보내줘서 사전등록에 성공했다. 컨퍼런스를 시작하면서 <a href="http://twitter.com/xguru">@xguru</a>님이 말씀하시길 7분만에 사전등록이 완료되었다고 하니 난 운이 좋았던것 같다.</p><p><strong>H3 2012 행사 스케치 영상</strong></p><p><iframe class="youtube " style="100%" src="https://www.youtube.com/embed/7QhC7gflC04"></iframe><br/></p><p>주제는 꽤 다양했는데 나는 최근 Node.js에 관심이 생기기 시작 했고 또한 최근 사용하고 있는 블로그 툴인 하루프레스를 만드신 <a href="http://twitter.com/rhiokim">@rhiokim</a>님이 발표를 하셔서 관련 세션들을 들었다. 들었던 세션들을 정리해보았다.</p>
-<h2 id="toc_6">&lt;모두의 도구&gt;로 프로토타이핑을 시작하라!</h2>
+<h2 id="toc_12">&lt;모두의 도구&gt;로 프로토타이핑을 시작하라!</h2>
 
                 </div>
                 <hr/>
-                <a class="pull-right" href="/post/h3-conference-2012#disqus_thread" data-disqus-identifier="3"></a>
+                <a class="pull-right" href="/post/h3-conference-2012#disqus_thread" data-disqus-identifier="4"></a>
                 <p>
                     <a href="/post/h3-conference-2012" class="btn btn-info">Read more...</a>
                 </p>
